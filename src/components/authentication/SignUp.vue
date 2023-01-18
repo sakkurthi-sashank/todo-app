@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ref } from "vue";
 import z from "zod";
 import { useFirebaseAuth } from "vuefire";
@@ -45,7 +45,7 @@ const handleCreateUsers = () => {
           window.location.href = "/auth/signin";
         });
       })
-      .catch((error) => {
+      .catch(() => {
         formerror.value.isError = true;
         formerror.value.message = "email already in use";
       });

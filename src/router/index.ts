@@ -1,21 +1,21 @@
 import { createRouter, createWebHistory } from "vue-router";
 import SignIn from "../components/authentication/SignIn.vue";
 import SignUp from "../components/authentication/SignUp.vue";
-import Authentication from "../layouts/Authentication.vue";
-import Home from "../layouts/Home.vue";
+import AuthPage from "../pages/AuthPage.vue";
+import HomePage from "../pages/HomePage.vue";
 import { getCurrentUser } from "vuefire";
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: HomePage,
     meta: { requiresAuth: true },
   },
   {
     path: "/auth",
     name: "Authentication",
-    component: Authentication,
+    component: AuthPage,
     children: [
       {
         path: "signin",

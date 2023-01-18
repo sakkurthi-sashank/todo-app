@@ -14,10 +14,10 @@ const handleSignIn = () => {
     credentials.value.email,
     credentials.value.password
   )
-    .then((result) => {
+    .then(() => {
       window.location.href = "/";
     })
-    .catch((error) => {
+    .catch(() => {
       formerror.value.isError = true;
       formerror.value.message = "Invalid Credentials";
     });

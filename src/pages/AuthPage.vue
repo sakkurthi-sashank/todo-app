@@ -31,7 +31,7 @@ const handleGoogleSignIn = () => {
     <div
       class="container flex flex-col items-center rounded-md border-0 border-neutral-700 sm:border"
     >
-      <div class="w-full max-w-md space-y-14">
+      <div class="w-full max-w-md space-y-10">
         <router-view />
         <div class="relative mx-4 border-b border-neutral-700"></div>
         <div class="flex w-full justify-center">
